@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".productScreen"
+    android:background="#D7DDD7">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/upperlogo"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="594dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Black Milk Tea"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="116dp"
+        android:layout_height="113dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="395dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/taro_milk_tea" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="628dp"
+        android:fontFamily="sans-serif-black"
+        android:layout_centerHorizontal="true"
+        android:text="Please Select Sizes"
+        android:textColor="#03A9F4"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="115dp"
+        android:layout_height="128dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="496dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/black_milk_tea" />
+
+    <ImageButton
+        android:id="@+id/smallblack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="529dp"
+        android:background="@drawable/smallsize" />
+
+    <ImageButton
+        android:id="@+id/mediumblack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="220dp"
+        android:layout_marginBottom="529dp"
+        android:background="@drawable/mediumsize" />
+
+    <ImageButton
+        android:id="@+id/largeblack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="290dp"
+        android:layout_marginBottom="529dp"
+        android:background="@drawable/largesize" />
+
+    <ImageButton
+        android:id="@+id/smalltaro"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="420dp"
+        android:background="@drawable/smalltaro" />
+
+    <ImageButton
+        android:id="@+id/mediumtaro"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="220dp"
+        android:layout_marginBottom="420dp"
+        android:background="@drawable/mediumtaro" />
+
+    <ImageButton
+        android:id="@+id/largetaro"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="290dp"
+        android:layout_marginBottom="420dp"
+        android:background="@drawable/largetaro" />
+
+    <ImageButton
+        android:id="@+id/smalltiger"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="309dp"
+        android:background="@drawable/smalltiger" />
+
+    <ImageButton
+        android:id="@+id/mediumtiger"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="220dp"
+        android:layout_marginBottom="309dp"
+        android:background="@drawable/mediumtiger" />
+
+    <ImageButton
+        android:id="@+id/largetiger"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="290dp"
+        android:layout_marginBottom="309dp"
+        android:background="@drawable/largetiger" />
+
+    <ImageButton
+        android:id="@+id/smallstraw"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="192dp"
+        android:background="@drawable/smallstraw" />
+
+    <ImageButton
+        android:id="@+id/mediumstraw"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="220dp"
+        android:layout_marginBottom="192dp"
+        android:background="@drawable/mediumstraw" />
+
+    <ImageButton
+        android:id="@+id/largestraw"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="290dp"
+        android:layout_marginBottom="191dp"
+        android:background="@drawable/largestraw" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="479dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Taro Milk Tea"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="135dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="268dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/tiger_milktea" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="367dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Tiger Milk Tea"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="257dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Strawberry Milk Tea"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="91dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="315dp"
+        android:layout_marginBottom="664dp"
+        android:backgroundTint="#DF0404"
+        android:fontFamily="sans-serif-black"
+        android:text="Sales report"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:layout_width="119dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="161dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/strawberry" />
+
+    <ImageView
+        android:id="@+id/buttonAddToCart"
+        android:layout_width="73dp"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:onClick="buttonAddToCart"
+        app:srcCompat="@drawable/cart" />
+
+    <TextView
+        android:id="@+id/cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="108dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-black"
+        android:text="View Cart"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

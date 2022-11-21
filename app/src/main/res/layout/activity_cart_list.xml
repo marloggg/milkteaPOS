@@ -41,17 +41,20 @@
         android:layout_width="106dp"
         android:layout_height="62dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="150dp"
-        android:layout_marginBottom="127dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginBottom="128dp"
+        android:backgroundTint="#1FCC26"
+        android:text="Pay"/>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="106dp"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="128dp"
         android:backgroundTint="#F44336"
-        android:text="Pay"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView19"
-        app:layout_constraintVertical_bias="0.0" />
+        android:text="Back"/>
 
     <TextView
         android:id="@+id/totalPrice"

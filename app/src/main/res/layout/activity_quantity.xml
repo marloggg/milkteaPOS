@@ -104,7 +104,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="240dp"
         android:layout_marginBottom="75dp"
-        android:backgroundTint="#E41B1B"
+        android:backgroundTint="#2FD636"
         android:text="Add to Cart"
         android:fontFamily="times new roman"/>
 
@@ -116,6 +116,16 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="425dp" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:backgroundTint="#F44336"
+        android:text="Back" />
 
 
 </RelativeLayout>

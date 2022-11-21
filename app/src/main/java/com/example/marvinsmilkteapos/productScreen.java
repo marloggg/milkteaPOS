@@ -148,6 +148,7 @@ public class productScreen extends AppCompatActivity {
                 Intent i= new Intent(productScreen.this, CartList.class);
                 i.putExtra("Cart", "cart");
                 startActivity(i);
+                finish();
             }
         });
         button.setOnClickListener(new View.OnClickListener() {
@@ -155,6 +156,7 @@ public class productScreen extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i= new Intent(productScreen.this, salesCashier.class);
                 startActivity(i);
+                finish();
             }
         });
         logOut.setOnClickListener(new View.OnClickListener() {
@@ -170,6 +172,7 @@ public class productScreen extends AppCompatActivity {
                                 Intent intent = new Intent(productScreen.this, cashierLogin.class);
                                 startActivity(intent);
                                 finish();
+                                DefaultData.cartList.clear();
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -178,7 +181,9 @@ public class productScreen extends AppCompatActivity {
                                 dialogInterface.cancel();
                             }
                         })
+
                         .show();
+
             }
         });
 

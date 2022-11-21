@@ -16,7 +16,7 @@ public class Quantity extends AppCompatActivity {
 
     ImageView dis, dis1;
     TextView value, total, name;
-    Button cart;
+    Button cart, back;
     int count = 0;
     float price, totalPrice;
     String productSize;
@@ -34,6 +34,7 @@ public class Quantity extends AppCompatActivity {
         total = findViewById(R.id.total);
         name = findViewById(R.id.name);
         cart = findViewById(R.id.cart);
+        back = findViewById(R.id.back);
 
         Intent intent = getIntent();
         productSize = intent.getStringExtra("productSize");
@@ -138,6 +139,14 @@ public class Quantity extends AppCompatActivity {
                     Toast.makeText(Quantity.this, "Please Select", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Quantity.this, productScreen.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

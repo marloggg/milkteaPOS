@@ -22,8 +22,7 @@ public class CartList extends AppCompatActivity {
 
     RecyclerView rview;
     TextView totalPrice;
-    Button pay;
-
+    Button pay, back;
     float tPrice;
 
     @Override
@@ -39,6 +38,7 @@ public class CartList extends AppCompatActivity {
         rview =findViewById(R.id.rview);
         totalPrice = findViewById(R.id.totalPrice);
         pay= findViewById(R.id.btnPay);
+        back = findViewById(R.id.back);
 
         QuantityDetailsAdapter adapter = new QuantityDetailsAdapter(DefaultData.cartList.toArray(new QuantityDetailsModel[DefaultData.cartList.size()]));
         rview.setHasFixedSize(true);
@@ -54,28 +54,34 @@ public class CartList extends AppCompatActivity {
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // prepare data
-                //Quantity - tPrice, dateNow, DefaultData.cashier
+
                 if (tPrice!=0) {
 
                     Date d = Calendar.getInstance().getTime();
                     java.text.SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd", Locale.getDefault());
                     String dateNow = dateFormat.format(d);
-                    //QuantityDetails - productName, quantity, unitPrice, totalPrice ---- DefaultData.cart
 
-                    // connect to db
+
                     DatabaseHelper db = new DatabaseHelper(getApplicationContext());
-                    //insert data to db
+
                     db.addQuantity(new QuantityModel(tPrice, dateNow, DefaultData.cashier));
                     db.addQuantityDetails(DefaultData.cartList);
-                    //reset cart
+
                     DefaultData.cartList.clear();
-                    //call Paid activity
+
                     startActivity(new Intent(getApplicationContext(), Successfully.class));
                     finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "Empty Cart", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CartList.this, productScreen.class);
+                startActivity(intent);
+                finish();
             }
         });
 

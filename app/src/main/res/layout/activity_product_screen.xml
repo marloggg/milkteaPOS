@@ -214,13 +214,25 @@
     <Button
         android:id="@+id/button"
         android:layout_width="91dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="315dp"
-        android:layout_marginBottom="664dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="649dp"
         android:backgroundTint="#DF0404"
         android:fontFamily="sans-serif-black"
         android:text="Sales report"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="91dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="310dp"
+        android:layout_marginBottom="649dp"
+        android:backgroundTint="#DF0404"
+        android:fontFamily="sans-serif-black"
+        android:text="LogOut"
         android:textSize="10dp" />
 
     <ImageView

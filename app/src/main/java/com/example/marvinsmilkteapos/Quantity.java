@@ -132,6 +132,7 @@ public class Quantity extends AppCompatActivity {
                     DefaultData.cartList.add(new QuantityDetailsModel(productSize, price, count, totalPrice));
                     Intent i = new Intent(Quantity.this, productScreen.class);
                     startActivity(i);
+                    finish();
                     Toast.makeText(Quantity.this, "Added to Cart ", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(Quantity.this, "Please Select", Toast.LENGTH_SHORT).show();

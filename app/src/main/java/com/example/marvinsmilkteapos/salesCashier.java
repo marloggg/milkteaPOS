@@ -95,6 +95,7 @@ public class salesCashier extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),productScreen.class);
                 startActivity(i);
+                finish();
             }
         });
     }

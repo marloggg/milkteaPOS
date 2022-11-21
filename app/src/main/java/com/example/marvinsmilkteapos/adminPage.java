@@ -97,6 +97,7 @@ public class adminPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(adminPage.this, LoginPage.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

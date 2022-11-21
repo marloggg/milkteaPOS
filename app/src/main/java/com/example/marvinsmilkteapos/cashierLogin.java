@@ -38,20 +38,24 @@ public class cashierLogin extends AppCompatActivity {
                 intent = new Intent(cashierLogin.this, productScreen.class);
                 DefaultData.cashier="cashier1";
                 Toast.makeText(cashierLogin.this,"Login Successfully",Toast.LENGTH_LONG).show();
+                finish();
             }
             else if (un.equals("cashier2")&&pwd.equals("cashier2")){
                 intent = new Intent(cashierLogin.this, productScreen.class);
                 DefaultData.cashier="cashier2";
                 Toast.makeText(cashierLogin.this,"Login Successfully",Toast.LENGTH_LONG).show();
+                finish();
             }
             else if (un.equals("cashier3")&&pwd.equals("cashier3")){
                 intent = new Intent(cashierLogin.this, productScreen.class);
                 DefaultData.cashier="cashier3";
                 Toast.makeText(cashierLogin.this,"Login Successfully",Toast.LENGTH_LONG).show();
+                finish();
             }
 
             if (intent != null) startActivity(intent);
             else if (intent == null) Toast.makeText(cashierLogin.this,"Please enter valid credentials",Toast.LENGTH_SHORT).show();
+
 
             }
         });

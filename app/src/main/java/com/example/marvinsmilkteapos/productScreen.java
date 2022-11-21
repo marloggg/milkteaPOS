@@ -1,18 +1,23 @@
 package com.example.marvinsmilkteapos;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class productScreen extends AppCompatActivity {
 
     ImageView smallblack, mediumblack, largeblack,smalltaro, mediumtaro, largetaro,smalltiger, mediumtiger, largetiger,smallstraw, mediumstraw, largestraw, buttonAddToCart;
-    Button button;
+    Button button, logOut;
+    AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,8 @@ public class productScreen extends AppCompatActivity {
         mediumstraw = findViewById(R.id.mediumstraw);
         largestraw = findViewById(R.id.largestraw);
         button = findViewById(R.id.button);
+        logOut = findViewById(R.id.logOut);
+        builder = new AlertDialog.Builder(this);
 
 
 
@@ -147,8 +154,31 @@ public class productScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i= new Intent(productScreen.this, salesCashier.class);
-                //   i.putExtra("Info", "info");
                 startActivity(i);
+            }
+        });
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                builder.setTitle("Log Out!")
+                        .setMessage("Do you want to Log Out?")
+                        .setCancelable(true)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(productScreen.this, cashierLogin.class);
+                                startActivity(intent);
+                                finish();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        })
+                        .show();
             }
         });
 

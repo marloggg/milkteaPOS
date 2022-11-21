@@ -36,6 +36,7 @@ public class adminLogin extends AppCompatActivity {
                     intent = new Intent(adminLogin.this, adminPage.class);
                     DefaultData.cashier="owner";
                     Toast.makeText(adminLogin.this,"Login Successfully",Toast.LENGTH_LONG).show();
+                    finish();
                 }
 
                 if (intent != null) startActivity(intent);

@@ -24,6 +24,7 @@ public class Successfully extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Successfully.this, productScreen.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

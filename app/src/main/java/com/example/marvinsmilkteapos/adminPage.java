@@ -131,7 +131,7 @@ public class adminPage extends AppCompatActivity {
         if (!tv_from.getText().toString().equalsIgnoreCase("Date from:"))dateFrom2=tv_from.getText().toString();
         if (!tv_to.getText().toString().equalsIgnoreCase("Date to:"))dateTo2=tv_to.getText().toString();
 
-        Toast.makeText(getApplicationContext(), cashier2 +"--"+dateFrom2+"--"+dateTo2,Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), cashier2 +"--"+dateFrom2+"--"+dateTo2,Toast.LENGTH_LONG).show();
 
         if (!cashier2.equalsIgnoreCase("")&& !dateFrom2.equalsIgnoreCase("")&& !dateTo2.equalsIgnoreCase("")){
             DatabaseHelper db = new DatabaseHelper(getApplicationContext());

@@ -18,13 +18,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="425dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="392dp"
+        android:fontFamily="times new roman"
         android:text="Login"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:fontFamily="times new roman"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/cashierLogin"
@@ -53,5 +53,14 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="95dp"
+        android:layout_height="86dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="457dp"
+        app:srcCompat="@drawable/succesfully" />
 
 </RelativeLayout>

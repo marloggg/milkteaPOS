@@ -16,45 +16,81 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rview"
-        android:layout_width="242dp"
-        android:layout_height="225dp"
+        android:layout_width="350dp"
+        android:layout_height="219dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="150dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="242dp"
         android:background="#E3D4D4"
         app:layout_constraintBottom_toTopOf="@+id/imageView19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="191dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="539dp"
+        android:fontFamily="times new roman"
+        android:gravity="center"
+        android:text="Cart Details"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:layout_width="2350dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnPay"
-        android:layout_width="106dp"
-        android:layout_height="62dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="270dp"
-        android:layout_marginBottom="128dp"
-        android:backgroundTint="#1FCC26"
-        android:text="Pay"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="461dp"
+        android:background="#C39E9E"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-    <Button
-        android:id="@+id/back"
-        android:layout_width="106dp"
-        android:layout_height="62dp"
+        <TextView
+            android:id="@+id/productSize"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Product"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/productQuantity"
+            android:layout_width="49dp"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/productUnitPrice"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="Unit Price" />
+
+        <TextView
+            android:id="@+id/productTotalPrice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Total Price" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="191dp"
+        android:layout_height="40dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginBottom="128dp"
-        android:backgroundTint="#F44336"
-        android:text="Back"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="177dp"
+        android:fontFamily="times new roman"
+        android:gravity="center"
+        android:text="Total Cost"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
 
     <TextView
         android:id="@+id/totalPrice"
@@ -63,7 +99,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="150dp"
-        android:layout_marginBottom="205dp"
+        android:layout_marginBottom="137dp"
         android:fontFamily="times new roman"
         android:gravity="center"
         android:text="total price"
@@ -71,68 +107,33 @@
         android:textSize="30dp"
         android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="191dp"
-        android:layout_height="40dp"
+    <Button
+        android:id="@+id/back"
+        android:layout_width="106dp"
+        android:layout_height="62dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="150dp"
-        android:layout_marginBottom="245dp"
-        android:fontFamily="times new roman"
-        android:gravity="center"
-        android:text="Total Cost"
-        android:textColor="@color/black"
-        android:textSize="30dp" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#F44336"
+        android:text="Back" />
 
-    <TextView
-        android:layout_width="191dp"
-        android:layout_height="40dp"
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="106dp"
+        android:layout_height="62dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="150dp"
-        android:layout_marginBottom="610dp"
-        android:fontFamily="times new roman"
-        android:gravity="center"
-        android:text="Cart Details"
-        android:textColor="@color/black"
-        android:textSize="30dp" />
+        android:layout_marginLeft="230dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#1FCC26"
+        android:text="Pay" />
 
-    <LinearLayout
-        android:layout_width="242dp"
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="150dp"
-        android:background="#C39E9E"
-        android:layout_marginBottom="529dp"
-        android:orientation="horizontal"
-        android:padding="5dp">
-
-        <TextView
-            android:id="@+id/productSize"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="Product"/>
-
-        <TextView
-            android:id="@+id/productQuantity"
-            android:layout_width="30dp"
-            android:text="No."
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/productUnitPrice"
-            android:layout_width="50dp"
-            android:text="Unit Price"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/productTotalPrice"
-            android:layout_width="50dp"
-            android:text="Total Price"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </RelativeLayout>
 

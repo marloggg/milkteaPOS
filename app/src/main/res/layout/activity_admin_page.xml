@@ -66,7 +66,7 @@
         android:layout_width="150dp"
         android:layout_height="38dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="259dp"
+        android:layout_marginLeft="210dp"
         android:layout_marginBottom="490dp"
         android:background="#E3D4D4"
         android:text="Date to:"

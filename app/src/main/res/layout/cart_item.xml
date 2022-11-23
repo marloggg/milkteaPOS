@@ -9,13 +9,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" android:padding="5dp">
         <TextView
-            android:layout_width="110dp"
+            android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:id="@+id/productSize"/>
         <TextView
             android:layout_width="30dp"
             android:layout_height="wrap_content"
+            android:gravity="left"
             android:id="@+id/productQuantity"/>
         <TextView
             android:layout_width="50dp"

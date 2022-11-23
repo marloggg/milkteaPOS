@@ -13,24 +13,20 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/upperlogo"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:layout_width="314dp"
+        android:layout_height="412dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginBottom="220dp"
-        android:gravity="center"
-        android:text="Successfully!"
-        android:textColor="@color/black"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="170dp"
+        app:srcCompat="@drawable/succesfully" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="184dp"
+        android:layout_marginBottom="111dp"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:text="THANK YOU FOR PURCHASING"
@@ -38,13 +34,17 @@
         android:textSize="20dp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:layout_width="337dp"
-        android:layout_height="472dp"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="225dp"
-        app:srcCompat="@drawable/succesfully" />
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="147dp"
+        android:gravity="center"
+        android:text="Successfully!"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/back"
@@ -52,7 +52,7 @@
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="27dp"
         android:backgroundTint="#EA2C2C"
         android:text="Back"
         android:textSize="20dp"

@@ -22,10 +22,8 @@ public class productScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_screen);
-
-
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.activity_product_screen);
 
         buttonAddToCart = findViewById(R.id.buttonAddToCart);
         smallblack = findViewById(R.id.smallblack);
@@ -169,7 +167,7 @@ public class productScreen extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                Intent intent = new Intent(productScreen.this, cashierLogin.class);
+                                Intent intent = new Intent(productScreen.this, LoginPage.class);
                                 startActivity(intent);
                                 finish();
                                 DefaultData.cartList.clear();

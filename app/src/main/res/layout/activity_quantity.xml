@@ -21,7 +21,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="150dp"
-        android:layout_marginBottom="343dp"/>
+        android:layout_marginBottom="311dp" />
 
     <TextView
         android:id="@+id/total"
@@ -42,7 +42,7 @@
         android:layout_width="62dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="110dp"
+        android:layout_marginLeft="90dp"
         android:layout_marginBottom="152dp"
         android:backgroundTint="#AFA6A6"
         android:onClick="decrement"
@@ -78,11 +78,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="250dp"
-        android:layout_marginBottom="624dp"
-        android:text="jslkfjlsajkfdl;df"
-        android:gravity="center"
-        android:textColor="@color/black"
+        android:layout_marginBottom="568dp"
         android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="jslkfjlsajkfdl;df"
+        android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold" />
 
@@ -90,7 +90,7 @@
         android:layout_width="62dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="240dp"
+        android:layout_marginLeft="205dp"
         android:layout_marginBottom="152dp"
         android:backgroundTint="#AFA6A6"
         android:onClick="increment"
@@ -114,8 +114,7 @@
         android:layout_height="200dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="425dp" />
+        android:layout_marginBottom="375dp" />
 
     <Button
         android:id="@+id/back"

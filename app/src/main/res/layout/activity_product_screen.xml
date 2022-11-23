@@ -7,11 +7,13 @@
     tools:context=".productScreen"
     android:background="#D7DDD7">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/upperlogo"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/upperlogo"/>
+
 
 
     <TextView
@@ -223,17 +225,18 @@
         android:text="Sales report"
         android:textSize="10dp" />
 
-    <Button
-        android:id="@+id/logOut"
-        android:layout_width="91dp"
-        android:layout_height="45dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="310dp"
-        android:layout_marginBottom="649dp"
-        android:backgroundTint="#DF0404"
-        android:fontFamily="sans-serif-black"
-        android:text="LogOut"
-        android:textSize="10dp" />
+        <Button
+            android:id="@+id/logOut"
+            android:layout_width="91dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="310dp"
+            android:layout_marginBottom="649dp"
+            android:backgroundTint="#DF0404"
+            android:fontFamily="sans-serif-black"
+            android:text="LogOut"
+            android:textSize="10dp" />
+
 
     <ImageView
         android:layout_width="119dp"
@@ -268,6 +271,8 @@
         android:textColor="@color/black"
         android:textSize="20dp"
         android:textStyle="bold" />
+
+
 
 
 </RelativeLayout>

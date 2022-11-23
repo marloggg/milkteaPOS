@@ -115,8 +115,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public List<QuantityModel> getAllQuantity(String cashier, String dateFrom, String dateTo) {
         List<QuantityModel> quantityList = new ArrayList<QuantityModel>();
         // Select All Query
-        String selectQuery = "SELECT  * FROM tblQuantity WHERE cashier='"+cashier+"' AND orderDate>='"+dateFrom+"' AND orderDate <='"+dateTo+"' ORDER BY id DESC";
-
+        String selectQuery="";
+        if (cashier.equalsIgnoreCase("ALL")){
+            selectQuery = "SELECT  * FROM tblQuantity WHERE orderDate>='"+dateFrom+"' AND orderDate <='"+dateTo+"' ORDER BY id DESC";
+        } else {
+            selectQuery = "SELECT  * FROM tblQuantity WHERE cashier='" + cashier + "' AND orderDate>='" + dateFrom + "' AND orderDate <='" + dateTo + "' ORDER BY id DESC";
+        }
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 

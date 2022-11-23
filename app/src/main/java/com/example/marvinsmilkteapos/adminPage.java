@@ -2,6 +2,8 @@ package com.example.marvinsmilkteapos;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
@@ -9,26 +11,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class adminPage extends AppCompatActivity {
 
-    TextView tv_from, tv_to;
+    TextView tv_from, tv_to, tSales;
     ImageView logout;
     AlertDialog.Builder builder;
     Spinner spinner;
     Button back;
     Calendar calendar;
     DatePickerDialog.OnDateSetListener dateFrom, dateTo;
+    RecyclerView rview1;
 
 
 
@@ -40,6 +46,8 @@ public class adminPage extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
+        tSales = findViewById(R.id.tSales);
+        rview1 = findViewById(R.id.rview1);
         back = findViewById(R.id.back);
         tv_from=findViewById(R.id.tv_from);
         tv_to=findViewById(R.id.tv_to);
@@ -71,6 +79,7 @@ public class adminPage extends AppCompatActivity {
                 String myFormat = "yyyy/MM/dd";
                 SimpleDateFormat dateFormat = new SimpleDateFormat(myFormat, Locale.getDefault());
                 tv_from.setText(dateFormat.format(calendar.getTime()));
+                getDataFromDB();
             }
         };
         dateTo = new DatePickerDialog.OnDateSetListener() {
@@ -83,6 +92,7 @@ public class adminPage extends AppCompatActivity {
                 String myFormat = "yyyy/MM/dd";
                 SimpleDateFormat dateFormat = new SimpleDateFormat(myFormat, Locale.getDefault());
                 tv_to.setText(dateFormat.format(calendar.getTime()));
+                getDataFromDB();
             }
         };
         tv_to.setOnClickListener(new View.OnClickListener() {
@@ -100,5 +110,41 @@ public class adminPage extends AppCompatActivity {
                 finish();
             }
         });
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                getDataFromDB();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+    }
+
+    public void getDataFromDB(){
+        String cashier2="", dateFrom2="",dateTo2="";
+        float totalSales=0;
+        cashier2 = spinner.getSelectedItem().toString();
+        if (!tv_from.getText().toString().equalsIgnoreCase("Date from:"))dateFrom2=tv_from.getText().toString();
+        if (!tv_to.getText().toString().equalsIgnoreCase("Date to:"))dateTo2=tv_to.getText().toString();
+
+        Toast.makeText(getApplicationContext(), cashier2 +"--"+dateFrom2+"--"+dateTo2,Toast.LENGTH_LONG).show();
+
+        if (!cashier2.equalsIgnoreCase("")&& !dateFrom2.equalsIgnoreCase("")&& !dateTo2.equalsIgnoreCase("")){
+            DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+            List<QuantityModel> cartList = db.getAllQuantity(cashier2,dateFrom2, dateTo2);
+            QuantityModel [] model = cartList.toArray(new QuantityModel[cartList.size()]);
+            QuantityAdapter adapter = new QuantityAdapter(model);
+            rview1.setHasFixedSize(true);
+            rview1.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+            rview1.setAdapter(adapter);
+            for (QuantityModel data: cartList){
+                totalSales += data.getTotalAmount();
+            }
+            tSales.setText("₱ "+totalSales);
+        }
     }
 }

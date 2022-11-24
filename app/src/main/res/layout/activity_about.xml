@@ -169,7 +169,7 @@
             <ImageView
                 android:layout_width="170dp"
                 android:layout_height="90dp"
-                app:srcCompat="@drawable/ic_launcher_foreground">
+                app:srcCompat="@drawable/arjay">
 
             </ImageView>
             <TextView

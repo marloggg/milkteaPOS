@@ -12,7 +12,7 @@ import android.widget.Button;
 public class LoginPage extends AppCompatActivity {
 
 
-    Button cashier, owner, logIn;
+    Button cashier, owner, about;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,17 @@ public class LoginPage extends AppCompatActivity {
 
         cashier = findViewById(R.id.cashierLogin);
         owner = findViewById(R.id.ownerLogin);
+        about = findViewById(R.id.about);
+
+
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent  intent = new Intent(LoginPage.this, About.class);
+                startActivity(intent);
+            }
+        });
 
     }
      public void buttonCashierLogin(View V){

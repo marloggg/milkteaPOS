@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/upperlogo"
-        />
+        android:background="@drawable/upperlogo" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,14 +44,28 @@
         android:layout_width="247dp"
         android:layout_height="69dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="161dp"
         android:layout_centerHorizontal="true"
-        android:onClick="buttonOwnerLogin"
+        android:layout_marginBottom="161dp"
         android:backgroundTint="#CDAB9E"
+        android:onClick="buttonOwnerLogin"
         android:text="Owner"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="247dp"
+        android:layout_height="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="59dp"
+        android:backgroundTint="#CDAB9E"
+        android:layout_centerHorizontal="true"
+        android:onClick="buttonOwnerLogin"
+        android:text="About"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageView3"

@@ -86,7 +86,7 @@
             <ImageView
                 android:layout_width="170dp"
                 android:layout_height="90dp"
-                app:srcCompat="@drawable/succesfully">
+                app:srcCompat="@drawable/marvin">
 
             </ImageView>
             <TextView
@@ -113,7 +113,7 @@
             <ImageView
                 android:layout_width="170dp"
                 android:layout_height="90dp"
-                app:srcCompat="@drawable/succesfully">
+                app:srcCompat="@drawable/leoncio">
 
             </ImageView>
 
@@ -141,7 +141,7 @@
             <ImageView
                 android:layout_width="170dp"
                 android:layout_height="90dp"
-                app:srcCompat="@drawable/succesfully">
+                app:srcCompat="@drawable/marlo">
 
             </ImageView>
 
@@ -169,7 +169,7 @@
             <ImageView
                 android:layout_width="170dp"
                 android:layout_height="90dp"
-                app:srcCompat="@drawable/succesfully">
+                app:srcCompat="@drawable/ic_launcher_foreground">
 
             </ImageView>
             <TextView

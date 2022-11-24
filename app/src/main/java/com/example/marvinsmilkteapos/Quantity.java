@@ -132,7 +132,7 @@ public class Quantity extends AppCompatActivity {
                 if (val != 0) {
                     DefaultData.cartList.add(new QuantityDetailsModel(productSize, price, count, totalPrice));
                     Intent i = new Intent(Quantity.this, productScreen.class);
-                    startActivity(i);
+                   // startActivity(i);
                     finish();
                     Toast.makeText(Quantity.this, "Added to Cart ", Toast.LENGTH_SHORT).show();
                 }else{
@@ -145,7 +145,7 @@ public class Quantity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Quantity.this, productScreen.class);
-                startActivity(intent);
+               // startActivity(intent);
                 finish();
             }
         });
